@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Champion and Relic Selector</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Spiegel:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="fondo.mp4" type="video/mp4">
+    </video>
+
+    <!-- Navegación superior -->
+    <nav class="top-nav">
+        <ul class="nav-links">
+            <li><a href="#">Wiki</a></li>
+            <li><a href="#">TierMaker</a></li>
+            <li><a href="#">Randomiser</a></li>
+        </ul>
+    </nav>
+
+    <!-- Título principal -->
+    <h1 class="title">RANDOM CHAMPION AND RELIC SELECTOR</h1>
+
+    <!-- Botón para ocultar/mostrar filtros -->
+    <button id="toggleFiltersButton" onclick="toggleFilters()">OCULTAR FILTROS</button>
+
+    <!-- Panel de filtros -->
+    <div id="filtersContainer">
+        <fieldset>
+            <legend>FILTRAR CAMPEONES</legend>
+            <label><input type="radio" name="championFilter" value="all" checked> Todos los Campeones</label>
+            <label><input type="radio" name="championFilter" value="3stars"> Solo 3 Estrellas</label>
+            <label><input type="radio" name="championFilter" value="6stars"> Solo 6 Estrellas</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>FILTRAR RELIQUIAS</legend>
+            <label><input type="checkbox" id="commonRelics" checked> Comunes</label>
+            <label><input type="checkbox" id="rareRelics" checked> Raras</label>
+            <label><input type="checkbox" id="epicRelics" checked> Épicas</label>
+            <label><input type="checkbox" id="allowDuplicates"> Permitir Duplicadas</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>FILTRAR AVENTURAS</legend>
+            <label><input type="radio" name="adventureFilter" value="all" checked> Todas</label>
+            <label><input type="radio" name="adventureFilter" value="normal"> Normales</label>
+            <label><input type="radio" name="adventureFilter" value="nightmare"> Pesadilla</label>
+        </fieldset>
+    </div>
+
+    <!-- Botón Principal -->
+    <button class="btn-primary-lol" onclick="selectRandom()">ELEGIR CAMPEÓN, RELIQUIAS Y AVENTURA</button>
+
+    <!-- Disposición de las 3 Columnas principales -->
+    <div class="main-layout">
+        <!-- Columna Campeón -->
+        <div class="card-box">
+            <h2 id="championName">YASUO</h2>
+            <img id="championImage" src="https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/MINIATURA/YASUO_MINIATURA.webp" alt="Campeón">
+        </div>
+
+        <!-- Columna Reliquias -->
+        <div class="card-box">
+            <h2>RELIQUIAS</h2>
+            <div id="relicImages" class="relics-grid">
+                <!-- Se generan mediante JS -->
+            </div>
+        </div>
+
+        <!-- Columna Aventura -->
+        <div class="card-box">
+            <h2 id="adventureName">AURELION SOL (TARGON)</h2>
+            <p id="adventureStars">5★</p>
+            <img id="adventureImage" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/AurelionSol_0.jpg" alt="Aventura">
+        </div>
+    </div>
+
+    <!-- Botón Cambiar Tema -->
+    <button id="toggleThemeButton" onclick="toggleTheme()">CAMBIAR TEMA</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
