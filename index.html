@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Spiegel:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!-- Video de fondo -->
     <video autoplay muted loop id="bgVideo">
         <source src="fondo.mp4" type="video/mp4">
@@ -19,7 +18,7 @@
     <!-- Navegación superior -->
     <nav class="top-nav">
         <ul class="nav-links">
-            <li><a href="#">Wiki</a></li>
+            <li><a href="https://sites.google.com/view/runeterrapoclatam/inicio" target="_blank" rel="noopener noreferrer">Wiki</a></li>
             <li><a href="#">TierMaker</a></li>
             <li><a href="#">Randomiser</a></li>
         </ul>
@@ -50,9 +49,46 @@
 
         <fieldset>
             <legend>FILTRAR AVENTURAS</legend>
-            <label><input type="radio" name="adventureFilter" value="all" checked> Todas</label>
-            <label><input type="radio" name="adventureFilter" value="normal"> Normales</label>
-            <label><input type="radio" name="adventureFilter" value="nightmare"> Pesadilla</label>
+            <!-- Selección múltiple por grupos -->
+            <div class="adventure-types-grid">
+                <label><input type="checkbox" name="adventureType" value="normal" checked> Normales</label>
+                <label><input type="checkbox" name="adventureType" value="nightmare" checked> Pesadillas</label>
+                <label><input type="checkbox" name="adventureType" value="titan" checked> Titanes</label>
+                <label><input type="checkbox" name="adventureType" value="spirit_blossom" checked> Flor Espiritual</label>
+                <label><input type="checkbox" name="adventureType" value="highnoon" checked> Forajidos</label>
+                <label><input type="checkbox" name="adventureType" value="arcane" checked> Arcane</label>
+            </div>
+
+            <!-- Botones auxiliares para selección rápida -->
+            <div class="quick-select-buttons">
+                <button type="button" onclick="selectAllAdventures(true)">Marcar Todas</button>
+                <button type="button" onclick="selectAllAdventures(false)">Desmarcar Todas</button>
+            </div>
+
+            <hr class="filter-divider">
+
+            <!-- Filtro por número de estrellas -->
+            <div class="star-filter-container">
+                <label for="adventureStarFilter">Dificultad por Estrellas:</label>
+                <select id="adventureStarFilter">
+                    <option value="all">Todas las estrellas</option>
+                    <option value="0★">0★</option>
+                    <option value="0.5★">0.5★</option>
+                    <option value="1★">1★</option>
+                    <option value="1.5★">1.5★</option>
+                    <option value="2★">2★</option>
+                    <option value="2.5★">2.5★</option>
+                    <option value="3★">3★</option>
+                    <option value="3.5★">3.5★</option>
+                    <option value="4★">4★</option>
+                    <option value="4.5★">4.5★</option>
+                    <option value="5★">5★</option>
+                    <option value="5.5★">5.5★</option>
+                    <option value="6★">6★</option>
+                    <option value="6.5★">6.5★</option>
+                    <option value="10★">10★</option>
+                </select>
+            </div>
         </fieldset>
     </div>
 
