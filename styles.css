@@ -10,23 +10,111 @@
     --panel-bg: rgba(1, 10, 19, 0.88);
 }
 
-/* Base y fondo general */
-body {
+/* Fondo por defecto / Tema Islas de la Sombra */
+body, body.shadow-isles-theme {
     font-family: 'Spiegel', sans-serif;
     color: var(--gold-bright);
     margin: 0;
     padding: 20px;
     text-align: center;
+    background-color: #030a0e;
     background-image: url('https://github.com/SirDiegoADM/LOR_IMAGENES/blob/main/ENCABEZADO/CAMPEONES_ENCABEZADO.webp?raw=true');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+body.shadow-isles-theme .card-box,
+body.shadow-isles-theme #filtersContainer {
+    background: var(--panel-bg);
+    border: 2px solid var(--gold-dark);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+/* Tema Claro */
 body.light-theme {
     background-color: #f4f6f8;
+    background-image: none;
     color: #1a202c;
+}
+
+body.light-theme .card-box,
+body.light-theme #filtersContainer {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: #cbd5e0;
+    color: #2d3748;
+}
+
+body.light-theme h1, 
+body.light-theme h2, 
+body.light-theme h3, 
+body.light-theme .title,
+body.light-theme legend {
+    color: #2b6cb0;
+    text-shadow: none;
+}
+
+/* Tema Flor Espiritual */
+body.spirit-blossom-theme {
+    background-color: #0f081d;
+    background-image: linear-gradient(180deg, #0f081d 0%, #1a0f2e 100%);
+    color: #f3e8ff;
+}
+
+body.spirit-blossom-theme .card-box,
+body.spirit-blossom-theme #filtersContainer {
+    background: rgba(26, 15, 46, 0.88);
+    border: 2px solid #b388ff;
+    box-shadow: 0 0 15px rgba(179, 136, 255, 0.25);
+}
+
+body.spirit-blossom-theme fieldset {
+    border-color: #7c4dff;
+}
+
+body.spirit-blossom-theme h1, 
+body.spirit-blossom-theme h2, 
+body.spirit-blossom-theme h3, 
+body.spirit-blossom-theme .title,
+body.spirit-blossom-theme legend {
+    color: #e1bee7;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.9), 0 0 12px rgba(225, 190, 231, 0.5);
+}
+
+body.spirit-blossom-theme button {
+    background: linear-gradient(180deg, #2a1b4e 0%, #140a28 100%);
+    border-color: #b388ff;
+    color: #f3e8ff;
+}
+
+body.spirit-blossom-theme button:hover {
+    border-color: #ea80fc;
+    box-shadow: 0 0 15px rgba(234, 128, 252, 0.5);
+}
+
+body.spirit-blossom-theme .btn-primary-lol {
+    background: linear-gradient(180deg, #311b92 0%, #1a237e 100%);
+    border-color: #ea80fc;
+    color: #ea80fc;
+}
+
+body.spirit-blossom-theme .btn-primary-lol:hover {
+    color: #ffffff;
+    background: linear-gradient(180deg, #ea80fc 0%, #8e24aa 100%);
+    box-shadow: 0 0 20px rgba(234, 128, 252, 0.7);
+}
+
+body.spirit-blossom-theme .relic-item {
+    border-color: #7c4dff;
+    background: rgba(15, 8, 29, 0.6);
+}
+
+body.spirit-blossom-theme .relic-item:hover,
+body.spirit-blossom-theme #championImage:hover, 
+body.spirit-blossom-theme #adventureImage:hover {
+    border-color: #ea80fc;
 }
 
 /* Video de fondo y overlay */
@@ -52,6 +140,10 @@ body::before {
     height: 100%;
     background: rgba(0, 0, 0, 0.55);
     z-index: -1;
+}
+
+body.light-theme::before {
+    display: none;
 }
 
 /* Tipografía de títulos */
@@ -152,7 +244,6 @@ button:hover {
     box-shadow: 0 0 15px rgba(200, 170, 110, 0.5);
 }
 
-/* Botón principal Hextech */
 .btn-primary-lol {
     background: linear-gradient(180deg, #1e2328 0%, #051a24 100%);
     border: 2px solid var(--hextech-blue);
@@ -175,7 +266,6 @@ button:hover {
     right: 15px;
 }
 
-/* Maquetación de tarjetas */
 .main-layout {
     display: flex;
     justify-content: center;
@@ -196,7 +286,6 @@ button:hover {
     align-items: center;
 }
 
-/* Rejilla y Contenedores de Reliquias */
 .relics-grid {
     display: flex;
     flex-direction: column;
@@ -223,14 +312,12 @@ button:hover {
     transform: scale(1.03);
 }
 
-/* Ocultar texto de las reliquias */
 .relic-item span,
 .relic-item p,
 .relic-item h3 {
     display: none !important;
 }
 
-/* Imagen de reliquia ocupando la tarjeta completa */
 .relic-item img {
     width: 100%;
     height: auto;
@@ -239,7 +326,6 @@ button:hover {
     display: block;
 }
 
-/* Imágenes Generales */
 #championImage, #adventureImage {
     width: 100%;
     max-width: 250px;
@@ -255,7 +341,6 @@ button:hover {
     transform: scale(1.02);
 }
 
-/* Animación de reemplazo de carta */
 @keyframes lolCardUpdate {
     0% {
         opacity: 0.3;
@@ -273,7 +358,6 @@ button:hover {
     animation: lolCardUpdate 0.3s ease-out forwards;
 }
 
-/* Animación de Corte (Slash Effect) */
 .card-slash {
     position: relative;
     overflow: hidden !important;
@@ -310,4 +394,38 @@ button:hover {
 @keyframes slashPulse {
     0% { transform: scale(0.96); filter: brightness(1.5); }
     100% { transform: scale(1); filter: brightness(1); }
+}
+
+.adventure-types-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.quick-select-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin: 8px 0;
+}
+
+.quick-select-buttons button {
+    font-size: 10px;
+    padding: 4px 8px;
+}
+
+.filter-divider {
+    border: 0;
+    border-top: 1px solid var(--gold-dark);
+    margin: 10px 0;
+}
+
+.star-filter-container select {
+    background: #010a13;
+    color: var(--gold-bright);
+    border: 1px solid var(--gold-dark);
+    padding: 4px;
+    width: 100%;
+    margin-top: 4px;
 }
