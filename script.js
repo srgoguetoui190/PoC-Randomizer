@@ -247,38 +247,166 @@ const relics = [
     { name: "Vara Imperial de Azir", rarity: "epica", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Vara_Imperial_de_Azir.webp" }
 ];
 const adventures = [
-    { name: "Aurelion Sol (Targon)", type: "normal", stars: "5★", img: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/AurelionSol_0.jpg" },
-    { name: "Swain Nightmare", type: "nightmare", stars: "6.5★", img: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Swain_0.jpg" }
-];
+    // ==========================================
+    // AVENTURAS NORMALES
+    // ==========================================
+    { name: "El Explorador Veloz", type: "normal", stars: "0★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01PZ008T2-full.png/200px-01PZ008T2-full.png?a20a9" },
+    { name: "El Poder de Demacia", type: "normal", stars: "1★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01DE012-hd-full.jpg/200px-01DE012-hd-full.jpg?0d58c" },
+    { name: "El Hada Hechicera", type: "normal", stars: "1★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/03IO002-full.png/200px-03IO002-full.png?3f0cc" },
+    { name: "La Ira de Zaun", type: "normal", stars: "1★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/98PZ001-full.png/200px-98PZ001-full.png?4d749" },
+    { name: "El Azote de los Mares", type: "normal", stars: "1.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/02BW032-full.png/200px-02BW032-full.png?441cb" },
+    { name: "El Explorador Pródigo", type: "normal", stars: "1.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01PZ036T1-full.png/200px-01PZ036T1-full.png?9e0cd" },
+    { name: "La Cazarrecompensas", type: "normal", stars: "0.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/02BW022T2-full.png/200px-02BW022T2-full.png?a5939" },
+    { name: "El Maestro de las Sombras", type: "normal", stars: "2★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01IO009-hd-full.jpg/200px-01IO009-hd-full.jpg?07e01" },
+    { name: "El Titán de las Profundidades", type: "normal", stars: "2★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/02BW053-hd-full.jpg/200px-02BW053-hd-full.jpg?e0ff8" },
+    { name: "La Mano de Noxus", type: "normal", stars: "2★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01NX038T2-full.png/200px-01NX038T2-full.png?c90f3" },
+    { name: "El Heraldo Mecánico", type: "normal", stars: "2.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/03PZ003-full.png/200px-03PZ003-full.png?236d9" },
+    { name: "El Glorioso Ejecutor", type: "normal", stars: "2.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01NX020-full.png/200px-01NX020-full.png?12da5" },
+    { name: "Flores y Hongos", type: "normal", stars: "2.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/98SB031-full.png/200px-98SB031-full.png?777e4" },
+    { name: "La Hija del Vacío", type: "normal", stars: "3★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/06SH009-full.png/200px-06SH009-full.png?37831" },
+    { name: "El Coleccionista de Almas", type: "normal", stars: "3★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01SI052-hd-full.jpg/200px-01SI052-hd-full.jpg?89683" },
+    { name: "El Señor de los Dragones", type: "normal", stars: "3★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/08RU014T9-full.png/200px-08RU014T9-full.png?2154b" },
+    { name: "La Voz Profunda Bajo las Olas", type: "normal", stars: "3★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/06BW011-full.png/200px-06BW011-full.png?91b8c" },
+    { name: "El Coloso", type: "normal", stars: "3.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/05DE009-full.png/200px-05DE009-full.png?7141a" },
+    { name: "El Miedo Ancestral", type: "normal", stars: "3.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/98RU004-full.png/200px-98RU004-full.png?8efdd" },
+    { name: "El Gran Robo", type: "normal", stars: "3.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/98SH002-full.png/200px-98SH002-full.png?dc598" },
+    { name: "El Forjador de Estrellas", type: "normal", stars: "4★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/03MT087-full.png/200px-03MT087-full.png?1d109" },
+    { name: "El Imperdonable", type: "normal", stars: "4.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01IO015T1-full.png/200px-01IO015T1-full.png?f0f35" },
+    { name: "La Bruja de Hielo", type: "normal", stars: "5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/04FR005-full.png/200px-04FR005-full.png?e7348" },
+    { name: "El Gran General Noxiano", type: "normal", stars: "5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/02NX007T2-full.png/200px-02NX007T2-full.png?9fc3d" },
 
-// Ocultar / Mostrar filtros
-function toggleFilters() {
-    const container = document.getElementById("filtersContainer");
-    const btn = document.getElementById("toggleFiltersButton");
-    if (!container) return;
-    
-    if (container.style.display === "none") {
-        container.style.display = "flex";
-        if (btn) btn.innerText = "Ocultar Filtros";
+    // ==========================================
+    // AVENTURAS DE PESADILLA
+    // ==========================================
+    { name: "El Bromista de las Mareas", type: "nightmare", stars: "4.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/02BW046-full.png/200px-02BW046-full.png?16a03" },
+    { name: "El Rey Arruinado", type: "nightmare", stars: "5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/04SI055T2-full.png/200px-04SI055T2-full.png?d201b" },
+    { name: "La Voz Profunda Bajo las Olas", type: "nightmare", stars: "6★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/06BW011-full.png/200px-06BW011-full.png?91b8c" },
+    { name: "El Miedo Ancestral", type: "nightmare", stars: "6.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/98RU004-full.png/200px-98RU004-full.png?8efdd" },
+    { name: "Con Amigos Como Estos...", type: "nightmare", stars: "10★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/03MT009-full.png/200px-03MT009-full.png?3b7d7" },
+
+    // ==========================================
+    // AVENTURAS DE LOS TITANES
+    // ==========================================
+    { name: "El Jefe", type: "titan", stars: "2★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/07IO011-full.png/200px-07IO011-full.png?f6e8d" },
+    { name: "El Renacido de Hierro", type: "titan", stars: "3★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/08SI042-full.png/200px-08SI042-full.png?73de0" },
+    { name: "El Titán de las Profundidades", type: "titan", stars: "4★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/02BW053T1-full.png/200px-02BW053T1-full.png?e0ab2" },
+    { name: "La Tormenta Implacable", type: "titan", stars: "5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/08FR001T1-full.png/200px-08FR001T1-full.png?7cfd5" },
+    { name: "El Señor de los Dragones", type: "titan", stars: "6★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/08RU014T9-full.png/200px-08RU014T9-full.png?2154b" },
+
+    // ==========================================
+    // FLOR ESPIRITUAL
+    // ==========================================
+    { name: "El Espíritu de la Venganza", type: "spirit_blossom", stars: "2★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01SI030-full.png/200px-01SI030-full.png?00152" },
+    { name: "La Invocadora de Mareas", type: "spirit_blossom", stars: "3★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/05BW005-full.png/200px-05BW005-full.png?df4ae" },
+    { name: "La Cantante Soñadora", type: "spirit_blossom", stars: "4★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/06PZ021-full.png/200px-06PZ021-full.png?34be3" },
+    { name: "El Ejemplo de Demacia", type: "spirit_blossom", stars: "5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/04DE008-full.png/200px-04DE008-full.png?cf3b4" },
+    { name: "Flores y Hongos", type: "spirit_blossom", stars: "6★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/98SB031T2-full.png/200px-98SB031T2-full.png?74f1a" },
+
+    // ==========================================
+    // FORAJIDOS DE RUNATERRA
+    // ==========================================
+    { name: "La Rosa del Desierto", type: "highnoon", stars: "2.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/07NX007-full.png/200px-07NX007-full.png?95d9c" },
+    { name: "El Desdén de la Luna", type: "highnoon", stars: "3.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/03MT056-full.png/200px-03MT056-full.png?12a51" },
+    { name: "La Espada Wuju", type: "highnoon", stars: "4.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/06IO008T1-full.png/200px-06IO008T1-full.png?03296" },
+    { name: "El Maestro de las Cartas", type: "highnoon", stars: "5.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/02BW026T3-full.png/200px-02BW026T3-full.png?86695" },
+    { name: "El Gran Robo", type: "highnoon", stars: "6.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/98SH002-full.png/200px-98SH002-full.png?dc598" },
+
+    // ==========================================
+    // ARCANE
+    // ==========================================
+    { name: "La Sacerdotisa del Kraken", type: "arcane", stars: "1.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/06BW006-full.png/200px-06BW006-full.png?079a2" },
+    { name: "El Emperador de las Arenas", type: "arcane", stars: "2.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/04SH003-full.png/200px-04SH003-full.png?06f14" },
+    { name: "El Poder de Demacia", type: "arcane", stars: "3.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01DE012T1-full.png/200px-01DE012T1-full.png?1355e" },
+    { name: "La Ira de Zaun", type: "arcane", stars: "4.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/98PZ001T2-full.png/200px-98PZ001T2-full.png?0e385" },
+    { name: "La Iluminada", type: "arcane", stars: "5.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01IO041T1-full.png/200px-01IO041T1-full.png?f8ff3" },
+    { name: "El Forjador de Estrellas", type: "arcane", stars: "6.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/03MT087T1-full.png/200px-03MT087T1-full.png?5952c" }
+];
+// Alternar entre temas: Islas de la Sombra -> Flor Espiritual -> Tema Claro
+function toggleTheme() {
+    const body = document.body;
+
+    if (body.classList.contains("shadow-isles-theme")) {
+        body.classList.remove("shadow-isles-theme");
+        body.classList.add("spirit-blossom-theme");
+    } else if (body.classList.contains("spirit-blossom-theme")) {
+        body.classList.remove("spirit-blossom-theme");
+        body.classList.add("light-theme");
     } else {
-        container.style.display = "none";
-        if (btn) btn.innerText = "Mostrar Filtros";
+        body.classList.remove("light-theme");
+        body.classList.add("shadow-isles-theme");
     }
 }
 
-// Cambiar tema
-function toggleTheme() {
-    document.body.classList.toggle("light-theme");
+// Botones para marcar/desmarcar todos los tipos de aventura
+function selectAllAdventures(status) {
+    const checkboxes = document.querySelectorAll('input[name="adventureType"]');
+    checkboxes.forEach(cb => cb.checked = status);
 }
 
-// Selección Aleatoria General
+// Reroll de Aventura filtrando por tipos (checkboxes) y estrellas (select)
+function rerollAdventure() {
+    const selectedTypes = Array.from(document.querySelectorAll('input[name="adventureType"]:checked'))
+                               .map(cb => cb.value);
+
+    const starFilterElem = document.getElementById("adventureStarFilter");
+    const starFilter = starFilterElem ? starFilterElem.value : "all";
+
+    let pool = adventures.filter(a => {
+        const matchesType = selectedTypes.includes(a.type);
+        const matchesStars = (starFilter === "all") || (a.stars === starFilter);
+        return matchesType && matchesStars;
+    });
+
+    if (!pool || pool.length === 0) pool = adventures;
+
+    const adv = pool[Math.floor(Math.random() * pool.length)];
+    const img = document.getElementById("adventureImage");
+
+    if (img && adv) {
+        img.classList.remove("card-updating");
+        void img.offsetWidth;
+
+        document.getElementById("adventureName").innerText = adv.name;
+        
+        const starsElem = document.getElementById("adventureStars");
+        if (starsElem) starsElem.innerText = adv.stars || "";
+
+        img.src = (adv.img && adv.img.trim() !== "") ? adv.img : "https://wiki.leagueoflegends.com/en-us/images/thumb/01PZ008T2-full.png/200px-01PZ008T2-full.png";
+        img.style.display = "block";
+
+        img.classList.add("card-updating");
+        img.style.cursor = "pointer";
+        img.onclick = rerollAdventure;
+    }
+}
+
+// Ocultar / Mostrar panel de filtros
+function toggleFilters() {
+    const container = document.getElementById("filtersContainer");
+    const btn = document.getElementById("toggleFiltersButton");
+    if (container) {
+        if (container.style.display === "none") {
+            container.style.display = "flex";
+            if (btn) btn.innerText = "OCULTAR FILTROS";
+        } else {
+            container.style.display = "none";
+            if (btn) btn.innerText = "MOSTRAR FILTROS";
+        }
+    }
+}
+
+function triggerSlashAnimation(element) {
+    element.classList.remove("card-slash", "card-updating");
+    void element.offsetWidth;
+    element.classList.add("card-slash");
+}
+
 function selectRandom() {
     rerollChampion();
     rerollRelics();
     rerollAdventure();
 }
 
-// Reroll de Campeón con animación LCU
 function rerollChampion() {
     const selectedInput = document.querySelector('input[name="championFilter"]:checked');
     const filter = selectedInput ? selectedInput.value : "all";
@@ -294,57 +422,19 @@ function rerollChampion() {
     const img = document.getElementById("championImage");
 
     if (img) {
-        // Reiniciar animación CSS estilo LoL
         img.classList.remove("card-updating");
-        void img.offsetWidth; // Forzar reflow
+        void img.offsetWidth;
 
         document.getElementById("championName").innerText = champ.name;
         img.src = champ.img;
         img.style.display = "block";
         img.classList.add("card-updating");
 
-        // Click directo en la imagen para re-girar
         img.style.cursor = "pointer";
         img.onclick = rerollChampion;
     }
 }
 
-// Reroll de Aventura con animación LCU
-function rerollAdventure() {
-    const selectedInput = document.querySelector('input[name="adventureFilter"]:checked');
-    const filter = selectedInput ? selectedInput.value : "all";
-
-    let pool = adventures;
-    if (filter !== "all") {
-        pool = adventures.filter(a => String(a.type) === String(filter) || String(a.stars) === String(filter));
-    }
-
-    if (!pool || pool.length === 0) pool = adventures;
-
-    const adv = pool[Math.floor(Math.random() * pool.length)];
-    const img = document.getElementById("adventureImage");
-
-    if (img) {
-        // Reiniciar animación CSS estilo LoL
-        img.classList.remove("card-updating");
-        void img.offsetWidth;
-
-        document.getElementById("adventureName").innerText = adv.name;
-        
-        const starsElem = document.getElementById("adventureStars");
-        if (starsElem) starsElem.innerText = adv.stars || "";
-
-        img.src = adv.img;
-        img.style.display = "block";
-        img.classList.add("card-updating");
-
-        // Click directo en la imagen para re-girar
-        img.style.cursor = "pointer";
-        img.onclick = rerollAdventure;
-    }
-}
-
-// Reroll global de Reliquias (3 iniciales)
 function rerollRelics() {
     const commonCheck = document.getElementById("commonRelics");
     const rareCheck = document.getElementById("rareRelics");
@@ -394,7 +484,6 @@ function rerollRelics() {
     });
 }
 
-// Reemplazar una sola reliquia al hacer clic
 function replaceSingleRelic(targetDiv) {
     const commonCheck = document.getElementById("commonRelics");
     const rareCheck = document.getElementById("rareRelics");
@@ -406,30 +495,25 @@ function replaceSingleRelic(targetDiv) {
     const useEpic = epicCheck ? epicCheck.checked : true;
     const allowDuplicates = dupCheck ? dupCheck.checked : false;
 
-    // 1. Filtrar reliquias activas
     let pool = relics.filter(r => 
         (r.rarity === "comun" && useCommon) ||
         (r.rarity === "rara" && useRare) ||
         (r.rarity === "epica" && useEpic)
     );
 
-    // Respaldo por si ningún checkbox está seleccionado
     if (!pool || pool.length === 0) pool = [...relics];
 
-    // 2. Controlar duplicados de forma segura
     if (!allowDuplicates) {
         const currentlyDisplayed = Array.from(document.querySelectorAll("#relicImages .relic-item span"))
                                         .map(span => span.textContent.trim());
         
         const filteredPool = pool.filter(r => !currentlyDisplayed.includes(r.name));
         
-        // Solo aplicamos el filtro si aún quedan opciones disponibles
         if (filteredPool.length > 0) {
             pool = filteredPool;
         }
     }
 
-    // 3. Selección segura y actualización
     const randomIndex = Math.floor(Math.random() * pool.length);
     const newRelic = pool[randomIndex];
 
@@ -438,6 +522,7 @@ function replaceSingleRelic(targetDiv) {
         triggerSlashAnimation(targetDiv);
     }
 }
+
 function preloadAllImages() {
     const allUrls = [
         ...champions.map(c => c.img),
@@ -453,7 +538,6 @@ function preloadAllImages() {
     });
 }
 
-// Ejecutar la precarga automáticamente cuando la página termine de cargar
 document.addEventListener("DOMContentLoaded", () => {
     preloadAllImages();
 });
