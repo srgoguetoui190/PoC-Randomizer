@@ -1,4 +1,7 @@
-// Base de datos de ejemplo
+/* ==========================================
+   1. BASES DE DATOS (CAMPEONES, RELIQUIAS, AVENTURAS Y MUTADORES)
+   ========================================== */
+
 const champions = [
     { name: "Aatrox", stars: "6stars", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/MINIATURA/AATROX_MINIATURA.webp" },
     { name: "Ahri", stars: "6stars", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/MINIATURA/AHRI_MINIATURA.webp" },
@@ -87,10 +90,8 @@ const champions = [
     { name: "Yuumi", stars: "6stars", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/MINIATURA/YUUMI_MINIATURA.webp" },
     { name: "Zoe", stars: "6stars", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/MINIATURA/ZOE_MINIATURA.webp" }
 ];
+
 const relics = [
-    // ==========================================
-    // RELIQUIAS COMUNES
-    // ==========================================
     { name: "Armadura de Warmog", rarity: "comun", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Armadura_de_Warmog.webp" },
     { name: "Bastón de la Hija de las Estrellas", rarity: "comun", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Bastón_de_la_Hija_de_las_Estrellas.webp" },
     { name: "Capítulo Perdido", rarity: "comun", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Capítulo_Perdido.webp" },
@@ -108,10 +109,6 @@ const relics = [
     { name: "Prototipo de Pulsar-Z", rarity: "comun", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Prototipo_de_Pulsar-Z.webp" },
     { name: "Sueños de Yordles", rarity: "comun", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Sueños_de_Yordles.webp" },
     { name: "Velo de la Banshee", rarity: "comun", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Velo_de_la_Banshee.webp" },
-
-    // ==========================================
-    // RELIQUIAS RARAS
-    // ==========================================
     { name: "Ángel Guardián", rarity: "rara", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Ángel_Guardián.webp" },
     { name: "Báculo del Arcángel", rarity: "rara", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Báculo_del_Arcángel.webp" },
     { name: "Baratija del Guardián", rarity: "rara", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Baratija_del_Guardián.webp" },
@@ -159,10 +156,6 @@ const relics = [
     { name: "Sujetaespadas Laurent", rarity: "rara", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Sujetaespadas_Laurent.webp" },
     { name: "Tempestad de Luden", rarity: "rara", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Tempestad_de_Luden.webp" },
     { name: "Transmodulador", rarity: "rara", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Transmodulador.webp" },
-
-    // ==========================================
-    // RELIQUIAS ÉPICAS
-    // ==========================================
     { name: "Abrazo de la Reina", rarity: "epica", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Abrazo_de_la_Reina.webp" },
     { name: "Acelerador de Portales de Norra", rarity: "epica", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Acelerador_de_Portales_de_Norra.webp" },
     { name: "Aliento Helado", rarity: "epica", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Aliento_Helado.webp" },
@@ -246,10 +239,8 @@ const relics = [
     { name: "Tumba Congelada", rarity: "epica", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Tumba_Congelada.webp" },
     { name: "Vara Imperial de Azir", rarity: "epica", img: "https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/RELIQUIAS/Vara_Imperial_de_Azir.webp" }
 ];
+
 const adventures = [
-    // ==========================================
-    // AVENTURAS NORMALES
-    // ==========================================
     { name: "El Explorador Veloz", type: "normal", stars: "0★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01PZ008T2-full.png/200px-01PZ008T2-full.png?a20a9" },
     { name: "El Poder de Demacia", type: "normal", stars: "1★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01DE012-hd-full.jpg/200px-01DE012-hd-full.jpg?0d58c" },
     { name: "El Hada Hechicera", type: "normal", stars: "1★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/03IO002-full.png/200px-03IO002-full.png?3f0cc" },
@@ -274,46 +265,26 @@ const adventures = [
     { name: "El Imperdonable", type: "normal", stars: "4.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01IO015T1-full.png/200px-01IO015T1-full.png?f0f35" },
     { name: "La Bruja de Hielo", type: "normal", stars: "5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/04FR005-full.png/200px-04FR005-full.png?e7348" },
     { name: "El Gran General Noxiano", type: "normal", stars: "5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/02NX007T2-full.png/200px-02NX007T2-full.png?9fc3d" },
-
-    // ==========================================
-    // AVENTURAS DE PESADILLA
-    // ==========================================
     { name: "El Bromista de las Mareas", type: "nightmare", stars: "4.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/02BW046-full.png/200px-02BW046-full.png?16a03" },
     { name: "El Rey Arruinado", type: "nightmare", stars: "5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/04SI055T2-full.png/200px-04SI055T2-full.png?d201b" },
     { name: "La Voz Profunda Bajo las Olas", type: "nightmare", stars: "6★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/06BW011-full.png/200px-06BW011-full.png?91b8c" },
     { name: "El Miedo Ancestral", type: "nightmare", stars: "6.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/98RU004-full.png/200px-98RU004-full.png?8efdd" },
     { name: "Con Amigos Como Estos...", type: "nightmare", stars: "10★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/03MT009-full.png/200px-03MT009-full.png?3b7d7" },
-
-    // ==========================================
-    // AVENTURAS DE LOS TITANES
-    // ==========================================
     { name: "El Jefe", type: "titan", stars: "2★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/07IO011-full.png/200px-07IO011-full.png?f6e8d" },
     { name: "El Renacido de Hierro", type: "titan", stars: "3★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/08SI042-full.png/200px-08SI042-full.png?73de0" },
     { name: "El Titán de las Profundidades", type: "titan", stars: "4★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/02BW053T1-full.png/200px-02BW053T1-full.png?e0ab2" },
     { name: "La Tormenta Implacable", type: "titan", stars: "5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/08FR001T1-full.png/200px-08FR001T1-full.png?7cfd5" },
     { name: "El Señor de los Dragones", type: "titan", stars: "6★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/08RU014T9-full.png/200px-08RU014T9-full.png?2154b" },
-
-    // ==========================================
-    // FLOR ESPIRITUAL
-    // ==========================================
     { name: "El Espíritu de la Venganza", type: "spirit_blossom", stars: "2★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01SI030-full.png/200px-01SI030-full.png?00152" },
     { name: "La Invocadora de Mareas", type: "spirit_blossom", stars: "3★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/05BW005-full.png/200px-05BW005-full.png?df4ae" },
     { name: "La Cantante Soñadora", type: "spirit_blossom", stars: "4★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/06PZ021-full.png/200px-06PZ021-full.png?34be3" },
     { name: "El Ejemplo de Demacia", type: "spirit_blossom", stars: "5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/04DE008-full.png/200px-04DE008-full.png?cf3b4" },
     { name: "Flores y Hongos", type: "spirit_blossom", stars: "6★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/98SB031T2-full.png/200px-98SB031T2-full.png?74f1a" },
-
-    // ==========================================
-    // FORAJIDOS DE RUNATERRA
-    // ==========================================
     { name: "La Rosa del Desierto", type: "highnoon", stars: "2.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/07NX007-full.png/200px-07NX007-full.png?95d9c" },
     { name: "El Desdén de la Luna", type: "highnoon", stars: "3.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/03MT056-full.png/200px-03MT056-full.png?12a51" },
     { name: "La Espada Wuju", type: "highnoon", stars: "4.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/06IO008T1-full.png/200px-06IO008T1-full.png?03296" },
     { name: "El Maestro de las Cartas", type: "highnoon", stars: "5.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/02BW026T3-full.png/200px-02BW026T3-full.png?86695" },
     { name: "El Gran Robo", type: "highnoon", stars: "6.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/98SH002-full.png/200px-98SH002-full.png?dc598" },
-
-    // ==========================================
-    // ARCANE
-    // ==========================================
     { name: "La Sacerdotisa del Kraken", type: "arcane", stars: "1.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/06BW006-full.png/200px-06BW006-full.png?079a2" },
     { name: "El Emperador de las Arenas", type: "arcane", stars: "2.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/04SH003-full.png/200px-04SH003-full.png?06f14" },
     { name: "El Poder de Demacia", type: "arcane", stars: "3.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01DE012T1-full.png/200px-01DE012T1-full.png?1355e" },
@@ -321,7 +292,61 @@ const adventures = [
     { name: "La Iluminada", type: "arcane", stars: "5.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/01IO041T1-full.png/200px-01IO041T1-full.png?f8ff3" },
     { name: "El Forjador de Estrellas", type: "arcane", stars: "6.5★", img: "https://wiki.leagueoflegends.com/en-us/images/thumb/03MT087T1-full.png/200px-03MT087T1-full.png?5952c" }
 ];
-// Alternar entre temas: Islas de la Sombra -> Flor Espiritual -> Tema Claro
+const defianceChallenges = [
+    // --- FAMILIA: AGOBIANTE ---
+    { name: "Agobiante I", family: "Agobiante", points: 2, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Agobiante%20I.webp" },
+    { name: "Agobiante II", family: "Agobiante", points: 4, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Agobiante%20II.webp" },
+    { name: "Agobiante III", family: "Agobiante", points: 8, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Agobiante%20III.webp" },
+    { name: "Agobiante IV", family: "Agobiante", points: 15, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Agobiante%20IV.webp" },
+   
+    // --- FAMILIA: AUMENTADO ---
+    { name: "Aumentado I", family: "Aumentado", points: 1, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Aumentado%20I.webp" },
+    { name: "Aumentado II", family: "Aumentado", points: 2, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Aumentado%20II.webp" },
+    { name: "Aumentado III", family: "Aumentado", points: 4, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Aumentado%20III.webp" },
+    { name: "Aumentado IV", family: "Aumentado", points: 7, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Aumentado%20IV.webp" },
+
+    // --- FAMILIA: DESARMAR ---
+    { name: "Desarme I", family: "Desarmar", points: 2, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Desarme%20I.webp" },
+    { name: "Desarme II", family: "Desarmar", points: 5, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Desarme%20II.webp" },
+    { name: "Desarme III", family: "Desarmar", points: 8, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Desarme%20III.webp" },
+
+    // --- FAMILIA: DESPIADADO ---
+    { name: "Despiadado I", family: "Despiadado", points: 2, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Despiadado%20I.webp" },
+    { name: "Despiadado II", family: "Despiadado", points: 6, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Despiadado%20II.webp" },
+    { name: "Despiadado III", family: "Despiadado", points: 10, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Despiadado%20III.webp" },
+
+    // --- FAMILIA: EVASIVO ---
+    { name: "Evasivo I", family: "Evasivo", points: 2, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Evasivo%20I.webp" },
+    { name: "Evasivo II", family: "Evasivo", points: 6, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Evasivo%20II.webp" },
+
+    // --- FAMILIA: IMPLACABLE ---
+    { name: "Implacable I", family: "Implacable", points: 3, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Implacable%20I.webp" },
+    { name: "Implacable II", family: "Implacable", points: 7, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Implacable%20II.webp" },
+    { name: "Implacable III", family: "Implacable", points: 15, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Implacable%20III.webp" },
+
+    // --- FAMILIA: MORTALIDAD ---
+    { name: "Mortalidad I", family: "Mortalidad", points: 5, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Mortalidad%20I.webp" },
+    { name: "Mortalidad II", family: "Mortalidad", points: 10, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Mortalidad%20II.webp" },
+    { name: "Mortalidad III", family: "Mortalidad", points: 15, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Mortalidad%20III.webp" },
+    { name: "Mortalidad IV", family: "Mortalidad", points: 20, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Mortalidad%20IV.webp" },
+
+    // --- FAMILIA: OMNISCIENTE ---
+    { name: "Omnisciente I", family: "Omnisciente", points: 2, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Omnisciente%20I.webp" },
+    { name: "Omnisciente II", family: "Omnisciente", points: 4, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Omnisciente%20II.webp" },
+    { name: "Omnisciente III", family: "Omnisciente", points: 6, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Omnisciente%20III.webp" },
+    { name: "Omnisciente IV", family: "Omnisciente", points: 8, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Omnisciente%20IV.webp" },
+
+    // --- FAMILIA: TOXICIDAD ---
+    { name: "Toxicidad I", family: "Toxicidad", points: 1, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Toxicidad%20I.webp" },
+    { name: "Toxicidad II", family: "Toxicidad", points: 3, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Toxicidad%20II.webp" },
+    { name: "Toxicidad III", family: "Toxicidad", points: 5, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Toxicidad%20III.webp" },
+    { name: "Toxicidad IV", family: "Toxicidad", points: 7, img: "https://raw.githubusercontent.com/srgoguetoui190/PoC-Randomizer/main/DESAFIANTE/Toxicidad%20IV.webp" }
+];
+/* ==========================================
+   2. CONTROL DE INTERFAZ Y TEMAS (UI)
+   ========================================== */
+
+// Cambiar entre los diferentes temas visuales de la aplicación
 function toggleTheme() {
     const body = document.body;
 
@@ -337,50 +362,7 @@ function toggleTheme() {
     }
 }
 
-// Botones para marcar/desmarcar todos los tipos de aventura
-function selectAllAdventures(status) {
-    const checkboxes = document.querySelectorAll('input[name="adventureType"]');
-    checkboxes.forEach(cb => cb.checked = status);
-}
-
-// Reroll de Aventura filtrando por tipos (checkboxes) y estrellas (select)
-function rerollAdventure() {
-    const selectedTypes = Array.from(document.querySelectorAll('input[name="adventureType"]:checked'))
-                               .map(cb => cb.value);
-
-    const starFilterElem = document.getElementById("adventureStarFilter");
-    const starFilter = starFilterElem ? starFilterElem.value : "all";
-
-    let pool = adventures.filter(a => {
-        const matchesType = selectedTypes.includes(a.type);
-        const matchesStars = (starFilter === "all") || (a.stars === starFilter);
-        return matchesType && matchesStars;
-    });
-
-    if (!pool || pool.length === 0) pool = adventures;
-
-    const adv = pool[Math.floor(Math.random() * pool.length)];
-    const img = document.getElementById("adventureImage");
-
-    if (img && adv) {
-        img.classList.remove("card-updating");
-        void img.offsetWidth;
-
-        document.getElementById("adventureName").innerText = adv.name;
-        
-        const starsElem = document.getElementById("adventureStars");
-        if (starsElem) starsElem.innerText = adv.stars || "";
-
-        img.src = (adv.img && adv.img.trim() !== "") ? adv.img : "https://wiki.leagueoflegends.com/en-us/images/thumb/01PZ008T2-full.png/200px-01PZ008T2-full.png";
-        img.style.display = "block";
-
-        img.classList.add("card-updating");
-        img.style.cursor = "pointer";
-        img.onclick = rerollAdventure;
-    }
-}
-
-// Ocultar / Mostrar panel de filtros
+// Ocultar o mostrar el panel superior de filtros
 function toggleFilters() {
     const container = document.getElementById("filtersContainer");
     const btn = document.getElementById("toggleFiltersButton");
@@ -395,18 +377,38 @@ function toggleFilters() {
     }
 }
 
+// Marcar o desmarcar todos los tipos de aventuras disponibles en los checkboxes
+function selectAllAdventures(status) {
+    const checkboxes = document.querySelectorAll('input[name="adventureType"]');
+    checkboxes.forEach(cb => cb.checked = status);
+}
+
+
+/* ==========================================
+   3. ANIMACIONES Y EFECTOS VISUALES
+   ========================================== */
+
+// Ejecutar animación de brillo o corte al actualizar elementos de forma aleatoria
 function triggerSlashAnimation(element) {
     element.classList.remove("card-slash", "card-updating");
     void element.offsetWidth;
     element.classList.add("card-slash");
 }
 
+
+/* ==========================================
+   4. GENERADORES ALEATORIOS (RANDOMIZER)
+   ========================================== */
+
+// Selección aleatoria global (Ejecuta campeones, reliquias y aventuras al mismo tiempo)
 function selectRandom() {
     rerollChampion();
     rerollRelics();
     rerollAdventure();
+    rerollDefiance();
 }
 
+// Reroll del Campeón aplicando filtros de estrellas
 function rerollChampion() {
     const selectedInput = document.querySelector('input[name="championFilter"]:checked');
     const filter = selectedInput ? selectedInput.value : "all";
@@ -435,6 +437,7 @@ function rerollChampion() {
     }
 }
 
+// Reroll del bloque completo de Reliquias (genera 3 reliquias aleatorias)
 function rerollRelics() {
     const commonCheck = document.getElementById("commonRelics");
     const rareCheck = document.getElementById("rareRelics");
@@ -446,12 +449,16 @@ function rerollRelics() {
     const useEpic = epicCheck ? epicCheck.checked : true;
     const allowDuplicates = dupCheck ? dupCheck.checked : false;
 
-    let pool = relics.filter(r => 
-        (r.rarity === "comun" && useCommon) ||
-        (r.rarity === "rara" && useRare) ||
-        (r.rarity === "epica" && useEpic)
-    );
+    // Filtramos por rareza Y excluimos las desactivadas en el pool
+    let pool = relics.filter(r => {
+        const matchesRarity = (r.rarity === "comun" && useCommon) ||
+                              (r.rarity === "rara" && useRare) ||
+                              (r.rarity === "epica" && useEpic);
+        const notDisabled = !disabledRelics.has(r.name);
+        return matchesRarity && notDisabled;
+    });
 
+    if (pool.length === 0) pool = relics.filter(r => !disabledRelics.has(r.name));
     if (pool.length === 0) pool = [...relics];
 
     const container = document.getElementById("relicImages");
@@ -479,11 +486,11 @@ function rerollRelics() {
         div.innerHTML = `<img src="${relic.img}" alt="${relic.name}"> <span>${relic.name}</span>`;
 
         div.addEventListener("click", () => replaceSingleRelic(div));
-
         container.appendChild(div);
     });
 }
 
+// Reemplazar de forma individual una sola reliquia respetando el pool excluido
 function replaceSingleRelic(targetDiv) {
     const commonCheck = document.getElementById("commonRelics");
     const rareCheck = document.getElementById("rareRelics");
@@ -495,12 +502,18 @@ function replaceSingleRelic(targetDiv) {
     const useEpic = epicCheck ? epicCheck.checked : true;
     const allowDuplicates = dupCheck ? dupCheck.checked : false;
 
-    let pool = relics.filter(r => 
-        (r.rarity === "comun" && useCommon) ||
-        (r.rarity === "rara" && useRare) ||
-        (r.rarity === "epica" && useEpic)
-    );
+    // Filtramos por rareza, por checkboxes y excluyendo las desactivadas en el pool
+    let pool = relics.filter(r => {
+        const matchesRarity = (r.rarity === "comun" && useCommon) ||
+                              (r.rarity === "rara" && useRare) ||
+                              (r.rarity === "epica" && useEpic);
+        const notDisabled = !disabledRelics.has(r.name);
+        return matchesRarity && notDisabled;
+    });
 
+    if (!pool || pool.length === 0) {
+        pool = relics.filter(r => !disabledRelics.has(r.name));
+    }
     if (!pool || pool.length === 0) pool = [...relics];
 
     if (!allowDuplicates) {
@@ -523,11 +536,168 @@ function replaceSingleRelic(targetDiv) {
     }
 }
 
+// Reroll de Aventuras filtrando por tipos seleccionados y nivel de estrellas
+function rerollAdventure() {
+    const selectedTypes = Array.from(document.querySelectorAll('input[name="adventureType"]:checked'))
+                               .map(cb => cb.value);
+
+    const selectedStars = Array.from(document.querySelectorAll('input[name="starFilter"]:checked'))
+                               .map(cb => cb.value);
+
+    let pool = adventures.filter(a => {
+        const matchesType = selectedTypes.includes(a.type);
+        const matchesStars = selectedStars.includes(a.stars);
+        return matchesType && matchesStars;
+    });
+
+    if (!pool || pool.length === 0) pool = adventures;
+
+    const adv = pool[Math.floor(Math.random() * pool.length)];
+    const img = document.getElementById("adventureImage");
+
+    if (img && adv) {
+        img.classList.remove("card-updating");
+        void img.offsetWidth;
+
+        document.getElementById("adventureName").innerText = adv.name;
+        
+        const starsElem = document.getElementById("adventureStars");
+        if (starsElem) starsElem.innerText = adv.stars || "";
+
+        img.src = (adv.img && adv.img.trim() !== "") ? adv.img : "https://wiki.leagueoflegends.com/en-us/images/thumb/01PZ008T2-full.png/200px-01PZ008T2-full.png";
+        img.style.display = "block";
+
+        img.classList.add("card-updating");
+        img.style.cursor = "pointer";
+        img.onclick = rerollAdventure;
+    }
+}
+
+function selectAllStars(status) {
+    const checkboxes = document.querySelectorAll('input[name="starFilter"]');
+    checkboxes.forEach(cb => cb.checked = status);
+}
+// Reroll del Sistema de Desafiante (Defiance) por puntos objetivo y sin repetir familias
+function rerollDefiance() {
+    const enableDefiance = document.getElementById("enableDefiance");
+    const containerBox = document.getElementById("defianceBoxContainer");
+    
+    // Si el checkbox de activar desafiantes no está marcado, ocultamos el contenedor
+    if (!enableDefiance || !enableDefiance.checked) {
+        if (containerBox) containerBox.style.display = "none";
+        return;
+    }
+
+    // Si está activo, mostramos la tarjeta en la interfaz principal
+    if (containerBox) containerBox.style.display = "flex";
+
+    const targetInput = document.getElementById("targetPoints");
+    const targetPoints = targetInput ? parseInt(targetInput.value) || 15 : 15;
+
+    const container = document.getElementById("defianceImages");
+    const totalPointsElem = document.getElementById("defianceTotalPoints");
+    if (!container) return;
+    container.innerHTML = "";
+
+    // Mezclamos aleatoriamente el pool de desafíos
+    let shuffledPool = [...defianceChallenges].sort(() => Math.random() - 0.5);
+    let selected = [];
+    let currentPoints = 0;
+    let usedFamilies = new Set();
+
+    // Algoritmo: Seleccionar máximo un desafío por familia hasta aproximarse al objetivo de puntos
+    for (let item of shuffledPool) {
+        if (!usedFamilies.has(item.family)) {
+            // Margen de tolerancia flexible para alcanzar o superar ligeramente el objetivo
+            if (currentPoints + item.points <= targetPoints + 4) {
+                selected.push(item);
+                usedFamilies.add(item.family);
+                currentPoints += item.points;
+            }
+        }
+        if (currentPoints >= targetPoints) break;
+    }
+
+    // Actualizamos el contador de puntos en pantalla
+if (totalPointsElem) {
+        totalPointsElem.innerText = `Puntos Totales: ${currentPoints}`;
+    }
+    // Renderizamos las tarjetas seleccionadas con su imagen y puntos
+selected.forEach(def => {
+        const div = document.createElement("div");
+        div.className = "relic-item card-updating";
+        div.style.cursor = "pointer";
+        div.setAttribute("data-family", def.family); // Guardamos la familia para el control
+        div.innerHTML = `<img src="${def.img}" alt="${def.name}"> <span>${def.name} (${def.points}pts)</span>`;
+        
+        // Evento para cambiar de forma individual al hacer clic encima
+        div.addEventListener("click", () => replaceSingleDefiance(div, def.name));
+
+        container.appendChild(div);
+    });
+}
+// Reemplazar de forma individual un solo desafío al hacer clic en él
+function replaceSingleDefiance(targetDiv, currentDefianceName) {
+    const targetInput = document.getElementById("targetPoints");
+    const targetPoints = targetInput ? parseInt(targetInput.value) || 15 : 15;
+
+    // Obtenemos las familias de los otros desafíos que están actualmente en pantalla (para no duplicar familia)
+    const currentlyDisplayedFamilies = Array.from(document.querySelectorAll("#defianceImages .relic-item"))
+        .filter(div => div !== targetDiv)
+        .map(div => div.getAttribute("data-family"));
+
+    // Filtramos el pool excluyendo la familia actual y las que ya están visibles en pantalla
+    let pool = defianceChallenges.filter(d => !currentlyDisplayedFamilies.includes(d.family) && d.name !== currentDefianceName);
+
+    if (!pool || pool.length === 0) {
+        pool = defianceChallenges.filter(d => d.name !== currentDefianceName);
+    }
+    if (!pool || pool.length === 0) pool = [...defianceChallenges];
+
+    // Seleccionamos uno al azar del pool filtrado
+    const randomIndex = Math.floor(Math.random() * pool.length);
+    const newDef = pool[randomIndex];
+
+    if (newDef) {
+        targetDiv.setAttribute("data-family", newDef.family);
+        targetDiv.innerHTML = `<img src="${newDef.img}" alt="${newDef.name}"> <span>${newDef.name} (${newDef.points}pts)</span>`;
+        triggerSlashAnimation(targetDiv);
+
+        // Recalcular y actualizar los puntos totales en pantalla
+        updateDefianceTotalPoints();
+    }
+}
+
+// Función auxiliar para recalcular los puntos de los desafíos mostrados
+function updateDefianceTotalPoints() {
+    const itemSpans = document.querySelectorAll("#defianceImages .relic-item span");
+    let total = 0;
+    
+    itemSpans.forEach(span => {
+        const text = span.textContent;
+        const match = text.match(/\((\d+)pts\)/);
+        if (match) {
+            total += parseInt(match[1]);
+        }
+    });
+
+    const targetInput = document.getElementById("targetPoints");
+    const targetPoints = targetInput ? parseInt(targetInput.value) || 15 : 15;
+    const totalPointsElem = document.getElementById("defianceTotalPoints");
+    
+if (totalPointsElem) {
+        totalPointsElem.innerText = `Puntos Totales: ${total}`;
+    }
+}
+/* ==========================================
+   5. OPTIMIZACIÓN Y CARGA INICIAL
+   ========================================== */
 function preloadAllImages() {
     const allUrls = [
         ...champions.map(c => c.img),
         ...relics.map(r => r.img),
-        ...adventures.map(a => a.img)
+        ...adventures.map(a => a.img),
+        ...defianceChallenges.map(d => d.img) // <--- Corregido con el corchete de cierre
     ];
 
     allUrls.forEach(url => {
@@ -541,3 +711,119 @@ function preloadAllImages() {
 document.addEventListener("DOMContentLoaded", () => {
     preloadAllImages();
 });
+/* ==========================================
+   6. GESTIÓN DE POOL Y MEMORIA (LOCALSTORAGE)
+   ========================================== */
+
+// Cargar reliquias excluidas guardadas previamente en el navegador
+let disabledRelics = new Set(JSON.parse(localStorage.getItem("disabledRelics") || "[]"));
+let currentRelicFilter = 'all';
+
+// Guardar el estado actual del pool en el navegador
+function saveRelicPoolState() {
+    localStorage.setItem("disabledRelics", JSON.stringify(Array.from(disabledRelics)));
+}
+
+// Abrir o cerrar la ventana emergente modal
+function toggleRelicGallery() {
+    const overlay = document.getElementById("relicModalOverlay");
+    if (!overlay) return;
+
+    if (overlay.style.display === "none" || overlay.style.display === "") {
+        overlay.style.display = "flex";
+        buildRelicModalContent();
+    } else {
+        overlay.style.display = "none";
+        saveRelicPoolState();
+    }
+}
+
+// Filtrar por pestañas (Todas, Comunes, Raras, Épicas)
+function filterRelicTab(rarityType) {
+    currentRelicFilter = rarityType;
+    
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    if (event && event.target) {
+        event.target.classList.add('active');
+    }
+
+    buildRelicModalContent();
+}
+
+// Marcar o desmarcar todas las reliquias en bloque según el filtro actual
+function setAllRelicsStatus(exclude) {
+    relics.forEach(r => {
+        if (currentRelicFilter === 'all' || r.rarity === currentRelicFilter) {
+            if (exclude) {
+                disabledRelics.add(r.name);
+            } else {
+                disabledRelics.delete(r.name);
+            }
+        }
+    });
+    saveRelicPoolState();
+    buildRelicModalContent();
+}
+
+// Construir el contenido del modal aplicando los filtros actuales
+function buildRelicModalContent() {
+    const bodyContainer = document.getElementById("relicModalBody");
+    if (!bodyContainer) return;
+    bodyContainer.innerHTML = "";
+
+    const categories = [
+        { title: "Reliquias Comunes", rarityKey: "comun" },
+        { title: "Reliquias Raras", rarityKey: "rara" },
+        { title: "Reliquias Épicas", rarityKey: "epica" }
+    ];
+
+    categories.forEach(cat => {
+        if (currentRelicFilter !== 'all' && cat.rarityKey !== currentRelicFilter) return;
+
+        const filteredList = relics.filter(r => r.rarity === cat.rarityKey);
+        if (filteredList.length === 0) return;
+
+        const rarityBox = document.createElement("div");
+        rarityBox.className = "relic-rarity-box";
+
+        const sectionTitle = document.createElement("div");
+        sectionTitle.className = "relic-section-title";
+        sectionTitle.innerText = cat.title;
+        rarityBox.appendChild(sectionTitle);
+
+        const grid = document.createElement("div");
+        grid.className = "relic-sections-grid";
+
+        filteredList.forEach(relic => {
+            const cleanId = relic.name.replace(/[^a-zA-Z0-9]/g, '');
+            const isExcluded = disabledRelics.has(relic.name);
+
+            const card = document.createElement("div");
+            card.className = "modal-relic-card";
+            card.id = `modal-card-${cleanId}`;
+            card.style.borderColor = isExcluded ? "red" : "var(--gold-dark)";
+            card.style.opacity = isExcluded ? "0.35" : "1";
+            card.title = relic.name;
+
+            card.innerHTML = `<img src="${relic.img}" alt="${relic.name}">`;
+
+            card.onclick = () => {
+                if (disabledRelics.has(relic.name)) {
+                    disabledRelics.delete(relic.name);
+                    card.style.borderColor = "var(--gold-dark)";
+                    card.style.opacity = "1";
+                } else {
+                    disabledRelics.add(relic.name);
+                    card.style.borderColor = "red";
+                    card.style.opacity = "0.35";
+                }
+                saveRelicPoolState();
+            };
+
+            grid.appendChild(card);
+        });
+
+        rarityBox.appendChild(grid);
+        bodyContainer.appendChild(rarityBox);
+    });
+}

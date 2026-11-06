@@ -10,12 +10,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Spiegel:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Video de fondo -->
+
+    <!-- ==========================================
+         SUBTÍTULO: VENTANA EMERGENTE (MODAL) - GALERÍA DE RELIQUIAS
+         Explicación: Permite personalizar individualmente qué reliquias
+         están habilitadas o deshabilitadas en el pool global.
+         ========================================== -->
+    <div id="relicModalOverlay" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>PERSONALIZAR POOL DE RELIQUIAS</h2>
+                <button type="button" class="modal-close-btn" onclick="toggleRelicGallery()">X</button>
+            </div>
+            
+            <!-- Barra de control superior (Filtros C-R-E y Marcar/Desmarcar) -->
+            <div class="modal-toolbar">
+                <div class="filter-tabs">
+                    <button type="button" class="tab-btn active" onclick="filterRelicTab('all')">TODAS</button>
+                    <button type="button" class="tab-btn btn-comun" onclick="filterRelicTab('comun')">(COMUNES)</button>
+                    <button type="button" class="tab-btn btn-rara" onclick="filterRelicTab('rara')">(RARAS)</button>
+                    <button type="button" class="tab-btn btn-epica" onclick="filterRelicTab('epica')">(ÉPICAS)</button>
+                </div>
+                <div class="bulk-actions">
+                    <button type="button" onclick="setAllRelicsStatus(false)">Marcar Todo</button>
+                    <button type="button" onclick="setAllRelicsStatus(true)">Desmarcar Todo</button>
+                </div>
+            </div>
+            
+            <div id="relicModalBody" class="modal-body">
+                <!-- Se genera dinámicamente mediante JS -->
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" onclick="toggleRelicGallery()">CERRAR Y GUARDAR</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================
+         SUBTÍTULO: VIDEO DE FONDO Y ENCABEZADOS
+         Explicación: Fondo multimedia animado, barra de enlaces y títulos principales.
+         ========================================== -->
     <video autoplay muted loop id="bgVideo">
         <source src="fondo.mp4" type="video/mp4">
     </video>
 
-    <!-- Navegación superior -->
     <nav class="top-nav">
         <ul class="nav-links">
             <li><a href="https://sites.google.com/view/runeterrapoclatam/inicio" target="_blank" rel="noopener noreferrer">Wiki</a></li>
@@ -24,14 +64,19 @@
         </ul>
     </nav>
 
-    <!-- Título principal -->
     <h1 class="title">RANDOM CHAMPION AND RELIC SELECTOR</h1>
 
-    <!-- Botón para ocultar/mostrar filtros -->
     <button id="toggleFiltersButton" onclick="toggleFilters()">OCULTAR FILTROS</button>
 
-    <!-- Panel de filtros -->
+
+    <!-- ==========================================
+         SUBTÍTULO: PANEL DE FILTROS CONFIGURABLES
+         Explicación: Contiene las opciones de filtrado para Campeones,
+         Reliquias, Aventuras y el nuevo Sistema de Desafiante (Defiance).
+         ========================================== -->
     <div id="filtersContainer">
+        
+        <!-- 1. Filtro de Campeones -->
         <fieldset>
             <legend>FILTRAR CAMPEONES</legend>
             <label><input type="radio" name="championFilter" value="all" checked> Todos los Campeones</label>
@@ -39,17 +84,29 @@
             <label><input type="radio" name="championFilter" value="6stars"> Solo 6 Estrellas</label>
         </fieldset>
 
+        <!-- 2. Filtro de Reliquias -->
         <fieldset>
             <legend>FILTRAR RELIQUIAS</legend>
             <label><input type="checkbox" id="commonRelics" checked> Comunes</label>
             <label><input type="checkbox" id="rareRelics" checked> Raras</label>
             <label><input type="checkbox" id="epicRelics" checked> Épicas</label>
             <label><input type="checkbox" id="allowDuplicates"> Permitir Duplicadas</label>
+            <button type="button" class="btn-gallery" onclick="toggleRelicGallery()" style="width: 100%; margin-top: 8px; font-size: 11px; padding: 6px;">PERSONALIZAR GALERÍA</button>
         </fieldset>
 
+        <!-- 3. Filtro del Sistema de Desafiante  -->
+        <fieldset>
+            <legend>SISTEMA DE DESAFIANTE</legend>
+            <label><input type="checkbox" id="enableDefiance"> Activar Desafiantes </label>
+            <div style="margin-top: 8px;">
+                <label for="targetPoints" style="font-size: 12px; color: var(--gold-main); font-family: 'Cinzel', serif;">PUNTOS OBJETIVO:</label>
+                <input type="number" id="targetPoints" value="15" min="1" max="50" style="background: #010a13; color: var(--gold-bright); border: 1px solid var(--gold-dark); padding: 4px; width: 60px; text-align: center; margin-top: 4px;">
+            </div>
+        </fieldset>
+
+        <!-- 4. Filtro de Aventuras -->
         <fieldset>
             <legend>FILTRAR AVENTURAS</legend>
-            <!-- Selección múltiple por grupos -->
             <div class="adventure-types-grid">
                 <label><input type="checkbox" name="adventureType" value="normal" checked> Normales</label>
                 <label><input type="checkbox" name="adventureType" value="nightmare" checked> Pesadillas</label>
@@ -59,7 +116,6 @@
                 <label><input type="checkbox" name="adventureType" value="arcane" checked> Arcane</label>
             </div>
 
-            <!-- Botones auxiliares para selección rápida -->
             <div class="quick-select-buttons">
                 <button type="button" onclick="selectAllAdventures(true)">Marcar Todas</button>
                 <button type="button" onclick="selectAllAdventures(false)">Desmarcar Todas</button>
@@ -67,59 +123,77 @@
 
             <hr class="filter-divider">
 
-            <!-- Filtro por número de estrellas -->
-            <div class="star-filter-container">
-                <label for="adventureStarFilter">Dificultad por Estrellas:</label>
-                <select id="adventureStarFilter">
-                    <option value="all">Todas las estrellas</option>
-                    <option value="0★">0★</option>
-                    <option value="0.5★">0.5★</option>
-                    <option value="1★">1★</option>
-                    <option value="1.5★">1.5★</option>
-                    <option value="2★">2★</option>
-                    <option value="2.5★">2.5★</option>
-                    <option value="3★">3★</option>
-                    <option value="3.5★">3.5★</option>
-                    <option value="4★">4★</option>
-                    <option value="4.5★">4.5★</option>
-                    <option value="5★">5★</option>
-                    <option value="5.5★">5.5★</option>
-                    <option value="6★">6★</option>
-                    <option value="6.5★">6.5★</option>
-                    <option value="10★">10★</option>
-                </select>
+            <label style="font-size: 12px; color: var(--gold-main); font-family: 'Cinzel', serif;">DIFICULTAD POR ESTRELLAS:</label>
+            <div class="star-checkbox-grid">
+                <label><input type="checkbox" name="starFilter" value="0★" checked> 0★</label>
+                <label><input type="checkbox" name="starFilter" value="0.5★" checked> 0.5★</label>
+                <label><input type="checkbox" name="starFilter" value="1★" checked> 1★</label>
+                <label><input type="checkbox" name="starFilter" value="1.5★" checked> 1.5★</label>
+                <label><input type="checkbox" name="starFilter" value="2★" checked> 2★</label>
+                <label><input type="checkbox" name="starFilter" value="2.5★" checked> 2.5★</label>
+                <label><input type="checkbox" name="starFilter" value="3★" checked> 3★</label>
+                <label><input type="checkbox" name="starFilter" value="3.5★" checked> 3.5★</label>
+                <label><input type="checkbox" name="starFilter" value="4★" checked> 4★</label>
+                <label><input type="checkbox" name="starFilter" value="4.5★" checked> 4.5★</label>
+                <label><input type="checkbox" name="starFilter" value="5★" checked> 5★</label>
+                <label><input type="checkbox" name="starFilter" value="5.5★" checked> 5.5★</label>
+                <label><input type="checkbox" name="starFilter" value="6★" checked> 6★</label>
+                <label><input type="checkbox" name="starFilter" value="6.5★" checked> 6.5★</label>
+                <label><input type="checkbox" name="starFilter" value="10★" checked> 10★</label>
+            </div>
+
+            <div class="quick-select-buttons">
+                <button type="button" onclick="selectAllStars(true)">Marcar Todas</button>
+                <button type="button" onclick="selectAllStars(false)">Desmarcar Todas</button>
             </div>
         </fieldset>
     </div>
 
-    <!-- Botón Principal -->
+
+    <!-- ==========================================
+         SUBTÍTULO: BOTÓN PRINCIPAL DE ACCIÓN
+         Explicación: Ejecuta la selección aleatoria conjunta.
+         ========================================== -->
     <button class="btn-primary-lol" onclick="selectRandom()">ELEGIR CAMPEÓN, RELIQUIAS Y AVENTURA</button>
 
-    <!-- Disposición de las 3 Columnas principales -->
+
+    <!-- ==========================================
+         SUBTÍTULO: DISPOSICIÓN PRINCIPAL DE TARJETAS
+         Explicación: Grilla de tarjetas dinámicas (Campeón, Reliquias, Aventura y Desafíos).
+         ========================================== -->
     <div class="main-layout">
-        <!-- Columna Campeón -->
+        
+        <!-- Columna 1: Campeón -->
         <div class="card-box">
             <h2 id="championName">YASUO</h2>
             <img id="championImage" src="https://cdn.jsdelivr.net/gh/SirDiegoADM/LOR_IMAGENES@main/MINIATURA/YASUO_MINIATURA.webp" alt="Campeón">
         </div>
 
-        <!-- Columna Reliquias -->
+        <!-- Columna 2: Reliquias -->
         <div class="card-box">
             <h2>RELIQUIAS</h2>
-            <div id="relicImages" class="relics-grid">
-                <!-- Se generan mediante JS -->
-            </div>
+            <div id="relicImages" class="relics-grid"></div>
         </div>
 
-        <!-- Columna Aventura -->
+        <!-- Columna 3: Aventura -->
         <div class="card-box">
             <h2 id="adventureName">AURELION SOL (TARGON)</h2>
             <p id="adventureStars">5★</p>
             <img id="adventureImage" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/AurelionSol_0.jpg" alt="Aventura">
         </div>
+
+        <!-- Columna 4: Desafíos  -->
+        <div class="card-box" id="defianceBoxContainer" style="display: none;">
+    <h2>DESAFÍO</h2>
+    <p id="defianceTotalPoints" style="font-size: 13px; font-family: 'Cinzel', serif; font-weight: 700; margin: 2px 0 10px 0; color: var(--hextech-blue);">Puntos Totales: 0</p>
+    <div id="defianceImages" class="relics-grid"></div>
+</div>
     </div>
 
-    <!-- Botón Cambiar Tema -->
+    <!-- Contenedor dinámico secundario -->
+    <div id="relicGalleryContainer" style="display: none;" class="relic-gallery-panel"></div>
+
+    <!-- Botón flotante para cambiar tema visual -->
     <button id="toggleThemeButton" onclick="toggleTheme()">CAMBIAR TEMA</button>
 
     <script src="script.js"></script>
