@@ -697,7 +697,7 @@ function preloadAllImages() {
         ...champions.map(c => c.img),
         ...relics.map(r => r.img),
         ...adventures.map(a => a.img),
-        ...defianceChallenges.map(d => d.img) // <--- Corregido con el corchete de cierre
+        ...defianceChallenges.map(d => d.img)
     ];
 
     allUrls.forEach(url => {
